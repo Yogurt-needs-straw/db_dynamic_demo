@@ -76,7 +76,7 @@ function doLogin() {
     store.commit("login", context);
 
     //4.跳转后台
-    router.replace({name: "basic"})
+    router.replace({name: context.routers[0]})
 
 }
 
