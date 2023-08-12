@@ -27,28 +27,28 @@ const routes = [
         name: 'user',
         component: () => import('../views/admin/UserView.vue'),
       },
-      {
-        path: 'info',
-        name: 'info',
-        component: () => import('../views/admin/InfoView.vue'),
-      },
-      {
-        path: 'more',
-        name: 'more',
-        component: () => import('../views/admin/MoreView.vue'),
-        children:[
-          {
-            path:'nine',
-            name:'nine',
-            component: () => import('../views/admin/MineView.vue'),
-          },
-          {
-            path:'six',
-            name:'six',
-            component: () => import('../views/admin/SixView.vue'),
-          }
-        ]
-      }
+      // {
+      //   path: 'info',
+      //   name: 'info',
+      //   component: () => import('../views/admin/InfoView.vue'),
+      // },
+      // {
+      //   path: 'more',
+      //   name: 'more',
+      //   component: () => import('../views/admin/MoreView.vue'),
+      //   children:[
+      //     {
+      //       path:'nine',
+      //       name:'nine',
+      //       component: () => import('../views/admin/MineView.vue'),
+      //     },
+      //     {
+      //       path:'six',
+      //       name:'six',
+      //       component: () => import('../views/admin/SixView.vue'),
+      //     }
+      //   ]
+      // }
     ]
   }
 ]

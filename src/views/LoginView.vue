@@ -44,7 +44,7 @@ function doLogin() {
           children:[
             {name:"menu",title:"菜单"},
             {name:"role",title:"角色"},
-            {name:"user",title:"用户"},
+
           ]
         },
         {
@@ -52,18 +52,18 @@ function doLogin() {
           title:"VIP中心",
           icon:"Box",
           children:[
-            {name:"info",title:"陌陌"},
+            {name:"user",title:"用户"},
           ]
         },
-        {
-          id:3,
-          title:"财务管理",
-          icon:"Setting",
-          children:[
-            {name:"nine",title:"久久"},
-            {name:"six",title:"溜溜"},
-          ]
-        },
+        // {
+        //   id:3,
+        //   title:"财务管理",
+        //   icon:"Setting",
+        //   children:[
+        //     {name:"nine",title:"久久"},
+        //     {name:"six",title:"溜溜"},
+        //   ]
+        // },
       ],
       permissions:{
         "user":["GET","DELETE"],

@@ -32,10 +32,28 @@
             <el-aside width="250px">
               <el-scrollbar>
                 <el-menu :router="true" :default-active="activeRouter">
-                  <el-sub-menu></el-sub-menu>
+
+                  <el-sub-menu v-for="item in menuList" :index="item.title" :key="item.title">
+                    <template #title>
+                      <el-icon>
+                        <component :is="item.icon"></component>
+                      </el-icon>
+                      <span>{{item.title}}</span>
+                    </template>
+                    <el-menu-item v-for="ele in item.children" :index="ele.name" :key="ele.id" :route="{name:ele.name}">
+                      {{ele.title}}
+                    </el-menu-item>
+                  </el-sub-menu>
+
                 </el-menu>
               </el-scrollbar>
             </el-aside>
+
+            <el-main class="body">
+              <router-view>
+
+              </router-view>
+            </el-main>
           </el-container>
         </div>
       </el-container>
