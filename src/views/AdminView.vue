@@ -63,9 +63,48 @@
 
 <script setup>
 
+import {computed} from "vue";
+import {useStore} from "vuex";
+import {useRoute} from "vue-router";
+
+const route = useRoute();
+const store = useStore();
+
+const activeRouter = computed(()=>route.name);
+
+const menuList = computed(() => store.getters.menus);
+
 </script>
 
 <style scoped>
+img{
+  height: 100%;
+}
 
+.pg-header{
+  height: 72px;
+  align-items: center;
+}
+
+.pg-header .logo{
+  height: 48px;
+}
+
+.pg-header .menu a {
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+.main{
+  height: calc(100vh - 72px);
+}
+
+.el-menu{
+  height: calc(100vh - 72px);
+}
+
+.body{
+  min-width: 900px;
+}
 
 </style>

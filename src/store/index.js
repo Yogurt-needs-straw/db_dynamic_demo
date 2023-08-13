@@ -30,13 +30,13 @@ export default createStore({
       localStorage.setItem('token', token);
 
       state.routers = JSON.stringify(routers);
-      localStorage.setItem('routers', routers);
+      localStorage.setItem('routers', state.routers);
 
       state.menus = JSON.stringify(menus);
-      localStorage.setItem('menus', menus);
+      localStorage.setItem('menus', state.menus);
 
       state.permissions = JSON.stringify(permissions);
-      localStorage.setItem('permissions', permissions);
+      localStorage.setItem('permissions', state.permissions);
     }
   },
   actions: {

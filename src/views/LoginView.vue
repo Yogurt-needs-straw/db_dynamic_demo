@@ -7,9 +7,9 @@
             <input type="text" placeholder="密码" v-model="state.pwd">
         </p>
         <p>
-            <select v-model="state.role">
-                <option :value="ele.value" v-for="ele in state.roleList" :key="ele.value">{{ ele.text }}</option>
-            </select>
+<!--            <select v-model="state.role">-->
+<!--                <option :value="ele.value" v-for="ele in state.roleList" :key="ele.value">{{ ele.text }}</option>-->
+<!--            </select>-->
         </p>
         <p>
             <input type="button" value="登录" @click="doLogin"/>
@@ -35,7 +35,7 @@ function doLogin() {
     //1.向后台发送请求且登录成功
     //2.返回信息
     const context = {
-      routers:["menu",'info','more','nine','six','admin','role','user'],
+      routers:["menu","info","more","nine","six","admin","role","user"],
       menus:[
         {
           id:1,
@@ -55,15 +55,6 @@ function doLogin() {
             {name:"user",title:"用户"},
           ]
         },
-        // {
-        //   id:3,
-        //   title:"财务管理",
-        //   icon:"Setting",
-        //   children:[
-        //     {name:"nine",title:"久久"},
-        //     {name:"six",title:"溜溜"},
-        //   ]
-        // },
       ],
       permissions:{
         "user":["GET","DELETE"],
